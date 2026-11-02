@@ -5,6 +5,9 @@
 Student Lab 1 solution by Rostislav Manzyuk: [Notes](LAB1.md) · [Notebook](Lab1.ipynb) · [PDF report](submission/Lab1_Rostislav_Manzyuk.pdf).
 Reproduce the frozen experiment with `python run_lab1.py --data data`.
 
+Local improvement: [Results](IMPROVEMENT.md) · [Executed notebook](Lab1_improvement.ipynb) · [Updated PDF](submission-v2/Lab1_Rostislav_Manzyuk.pdf).
+Test macro-F1: **0.6593**, compared with **0.6535** for the submitted version. Reproduce with `python run_lab1_v2.py --data data`.
+
 **Did the post do better or worse than its author usually does?**
 
 5,433 LinkedIn authors · 151,351 posts · 89,018 labels · 161,589 media files

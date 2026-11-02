@@ -18,7 +18,7 @@ from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import cm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import Image, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from reportlab.platypus import Image, KeepTogether, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 
 def main():
@@ -31,6 +31,7 @@ def main():
     if not path.is_file():
         raise SystemExit("Нет измеренных результатов. Сначала запустите train_lab1.py.")
     m = json.loads(path.read_text())
+    improvement = m.get("improvement")
     fixture = m.get("data_kind") != "official-release"
     if fixture and not args.allow_fixture:
         raise SystemExit("Отчёт для сдачи требует результатов на официальном датасете.")
@@ -58,7 +59,8 @@ def main():
         text = text.replace("—", "-").replace("–", "-")
         for char in ['«', '»', '“', '”']:
             text = text.replace(char, '"')
-        story.append(Paragraph(text, styles[style]))
+        item = Paragraph(text, styles[style])
+        story.append(KeepTogether([item]) if improvement and style == "BodyText" else item)
 
     def table(rows):
         t = Table(rows, hAlign="LEFT", repeatRows=1)
@@ -97,6 +99,12 @@ def main():
               "Словарь TF-IDF, заполнение пропусков и масштабирование тоже обучаются внутри train. "
               "После выбора параметров зафиксировал конфигурацию, переобучил модели на всём train "
               "и посчитал итоговые результаты на официальном test.")
+    if improvement:
+        paragraph("Дополнительные подходы сравнил на двух разбиениях внутри train, "
+                  "seed 42 и 137, по 20% авторов для валидации. Конфигурации смешивания "
+                  "с первой валидации переносил на вторую. Итог выбрал по среднему macro-F1 "
+                  "с условием улучшения обеих валидаций. Разбиения зависимы: часть авторов "
+                  "и постов в них совпадает. Это две проверки, а не два независимых теста.")
     paragraph("В своих признаках исправил разбор времени сбора: смешанные ISO-форматы "
               "с долями секунды и без них разбираются в UTC. Это восстановило 8 185 дат "
               "в размеченной части. Исходный baseline запускается с собственной предобработкой без изменений.")
@@ -108,6 +116,11 @@ def main():
               "за последние 3, 5, 10 и 20 постов, отклонение недавних результатов от обычного уровня, "
               "частоту публикаций и изменения длины текста. Заодно добавил признаки оформления: "
               "вопросы, восклицания, абзацы, символы, упоминания и долю заглавных букв.")
+    if improvement:
+        paragraph("В новом раунде добавил семантическую историю: результат похожих более ранних "
+                  "постов того же автора относительно его обычного уровня. Проверил 1, 3, 5 и 10 "
+                  "ближайших постов и плавные веса по косинусному сходству. Учитываются только "
+                  "уже известные реакции прошлых постов; текущий пост в историю не входит.")
     paragraph("Отдельно попробовал текстовую модель: TF-IDF по словам и парам слов, а также по "
               "символьным фрагментам длиной 3-5. К ним добавил числовые признаки и обучил "
               "логистическую регрессию с балансировкой классов. Так модель может использовать "
@@ -135,8 +148,18 @@ def main():
                       "начальных постов. Это те пять постов каждого автора, на которых формируется "
                       "исходный уровень и для которых ещё нет целевой метки.")
         paragraph("Версия encoder зафиксирована: " + escape(encoder["revision"]) + ".")
+        if improvement:
+            paragraph("Дополнительно обучил небольшую нейросеть на полных E5-векторах текущего "
+                      "текста, профиле, отличии текста от недавней и всей предыдущей истории, "
+                      "их взаимодействиях и числовых признаках. Классификатор: слои 256 и 128 "
+                      "нейронов, dropout 0.3, AdamW. Масштабирование и обработка категорий "
+                      "обучаются только на fit-авторах.")
+            paragraph(f"Итоговое переобучение: {improvement['dense_epochs']} эпохи, "
+                      f"усреднение инициализаций {escape(str(improvement['dense_seeds']))}. "
+                      f"Доля нейросети в итоговых вероятностях - {improvement['neural_weight']:.1f}. "
+                      "После смешивания применяются одинаковые множители классов.")
         comparison = Path(__file__).parent / "submission" / "validation_experiments.json"
-        if comparison.is_file():
+        if comparison.is_file() and not improvement:
             study = json.loads(comparison.read_text())
             if study.get("labels_sha256") == m["labels_sha256"]:
                 paragraph(f"На той же валидации смешивание без E5 дало macro-F1 "
@@ -148,11 +171,34 @@ def main():
     rows = [["Подход", "Val macro-F1", "Test macro-F1", "QWK", "Accuracy"]]
     names = {"official_baseline": "Baseline", "history_catboost": "CatBoost + E5" if m.get("embeddings") else "История + CatBoost",
              "text_and_metadata": "TF-IDF + признаки", "selected_blend": "Смешивание"}
+    if improvement:
+        names = {**dict(list(names.items())[:-1]),"dense_classifier":"Нейросеть на E5",
+                 "selected_blend":"Смешивание"}
     for key, label in names.items():
         v, t = m["validation"][key], m["test"][key]
         rows.append([label, f"{v['macro_f1']:.4f}", f"{t['macro_f1']:.4f}",
                      f"{t['qwk']:.4f}", f"{t['accuracy']:.4f}"])
+    if improvement:
+        previous = m["test"]["previous_submission"]
+        rows.insert(-1,["Предыдущая версия","0.6662",f"{previous['macro_f1']:.4f}",
+                        f"{previous['qwk']:.4f}",f"{previous['accuracy']:.4f}"])
     table(rows)
+    if improvement:
+        table([["Валидация по авторам","Предыдущая версия","Выбранная модель"]]+[
+            [f"seed {seed}",f"{improvement['reference_validation'][seed]['macro_f1']:.4f}",
+             f"{improvement['validation'][seed]['macro_f1']:.4f}"] for seed in ["42","137"]])
+        extra = m["previous_comparison"]
+        low,high = extra["paired_delta_95ci"]
+        paragraph(f"Относительно уже отправленной версии прирост macro-F1 - "
+                  f"{extra['delta_macro_f1']:+.4f}, 95% парный интервал по авторам - "
+                  f"[{low:+.4f}; {high:+.4f}]. Test ранее уже использовался для оценки "
+                  "первой версии. В новом раунде кандидаты выбирались без его оценивания, "
+                  "а итоговое сравнение выполнено после фиксации настроек.")
+        if improvement.get("finetune_summary"):
+            paragraph("Также проверил дообучение двух верхних слоёв E5 вместе с классификатором "
+                      "текста и контекста. Результаты этого более тяжёлого подхода сохранены "
+                      "с остальными экспериментами. Итоговая конфигурация выбрана по "
+                      "согласованному улучшению двух валидаций.")
     paragraph("В README исходного репозитория указан baseline 0.5410. В таблице использую "
               f"результат его отдельного запуска в этом окружении - {baseline['macro_f1']:.4f}.")
     delta = result["macro_f1"] - baseline["macro_f1"]
@@ -213,10 +259,12 @@ def main():
               "в этой версии не использовал.")
     paragraph("Как воспроизвести", "Heading2")
     paragraph(f"Python {escape(m['python'])}, scikit-learn {escape(m['sklearn'])}. "
-              f"Обучение и оценка моделей заняли {m['elapsed_seconds']:.0f} секунд. "
+              f"{'Дополнительное обучение и оценка' if improvement else 'Обучение и оценка моделей'} "
+              f"заняли {m['elapsed_seconds']:.0f} {'с.' if improvement else 'секунд.'} "
               "Кодирование текстов - отдельный подготовительный шаг. "
               "После установки requirements-embeddings.txt и распаковки данных достаточно запустить:")
-    paragraph("<font face='Courier'>python run_lab1.py --data data</font>")
+    entry = "run_lab1_v2.py" if improvement else "run_lab1.py"
+    paragraph(f"<font face='Courier'>python {entry} --data data</font>")
     paragraph("Команда проверяет разметку, готовит локальные эмбеддинги, обучает модели "
               "с зафиксированными параметрами из selection.json, проверяет предсказания "
               "и собирает комплект для сдачи.")
@@ -243,7 +291,11 @@ def main():
                       leftMargin=1.7 * cm, rightMargin=1.7 * cm,
                       topMargin=1.5 * cm, bottomMargin=1.5 * cm).build(
                           story, onFirstPage=footer, onLaterPages=footer)
-    print(args.output)
+    try:
+        display_output = args.output.resolve().relative_to(Path.cwd())
+    except ValueError:
+        display_output = args.output.name
+    print(display_output)
 
 
 if __name__ == "__main__":

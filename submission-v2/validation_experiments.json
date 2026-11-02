@@ -1,0 +1,4369 @@
+{
+  "selection_scope": "official train only; comparison over two author-group holdouts",
+  "reference": {
+    "42": {
+      "macro_f1": 0.6662,
+      "qwk": 0.6079,
+      "accuracy": 0.6982
+    },
+    "137": {
+      "macro_f1": 0.6564,
+      "qwk": 0.5944,
+      "accuracy": 0.6919
+    }
+  },
+  "ranked": [
+    {
+      "name": "semantic_tree+text:selected+dense_ensemble:0.3",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6766,
+          "qwk": 0.6203,
+          "accuracy": 0.7058
+        },
+        "137": {
+          "macro_f1": 0.6729,
+          "qwk": 0.6129,
+          "accuracy": 0.7072
+        }
+      },
+      "mean_macro_f1": 0.67475
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense_ensemble:0.4",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6739,
+          "qwk": 0.6193,
+          "accuracy": 0.6994
+        },
+        "137": {
+          "macro_f1": 0.6753,
+          "qwk": 0.6167,
+          "accuracy": 0.7063
+        }
+      },
+      "mean_macro_f1": 0.6746000000000001
+    },
+    {
+      "name": "neighbor_tree+text:selected+average_neural:0.4",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6763,
+          "qwk": 0.6201,
+          "accuracy": 0.705
+        },
+        "137": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6138,
+          "accuracy": 0.7023
+        }
+      },
+      "mean_macro_f1": 0.6738999999999999
+    },
+    {
+      "name": "average_tree+text:frozen+dense_ensemble:0.3",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6749,
+          "qwk": 0.6197,
+          "accuracy": 0.7024
+        },
+        "137": {
+          "macro_f1": 0.6728,
+          "qwk": 0.6139,
+          "accuracy": 0.7053
+        }
+      },
+      "mean_macro_f1": 0.6738500000000001
+    },
+    {
+      "name": "semantic_tree+text:selected+dense:0.3",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6756,
+          "qwk": 0.6181,
+          "accuracy": 0.7061
+        },
+        "137": {
+          "macro_f1": 0.6718,
+          "qwk": 0.6121,
+          "accuracy": 0.7051
+        }
+      },
+      "mean_macro_f1": 0.6737
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense_ensemble:0.3",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6741,
+          "qwk": 0.6166,
+          "accuracy": 0.7034
+        },
+        "137": {
+          "macro_f1": 0.6732,
+          "qwk": 0.614,
+          "accuracy": 0.7062
+        }
+      },
+      "mean_macro_f1": 0.6736500000000001
+    },
+    {
+      "name": "neighbor_tree+text:selected+average_neural:0.3",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6763,
+          "qwk": 0.6191,
+          "accuracy": 0.7066
+        },
+        "137": {
+          "macro_f1": 0.671,
+          "qwk": 0.612,
+          "accuracy": 0.7035
+        }
+      },
+      "mean_macro_f1": 0.6736500000000001
+    },
+    {
+      "name": "average_tree+text:selected+average_neural:0.4",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6758,
+          "qwk": 0.6191,
+          "accuracy": 0.7052
+        },
+        "137": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6142,
+          "accuracy": 0.7024
+        }
+      },
+      "mean_macro_f1": 0.67365
+    },
+    {
+      "name": "semantic_tree+text:selected+dense_ensemble:0.4",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6736,
+          "qwk": 0.6179,
+          "accuracy": 0.7012
+        },
+        "137": {
+          "macro_f1": 0.6736,
+          "qwk": 0.6144,
+          "accuracy": 0.7065
+        }
+      },
+      "mean_macro_f1": 0.6736
+    },
+    {
+      "name": "semantic_tree+text:selected+average_neural:0.3",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6765,
+          "qwk": 0.6192,
+          "accuracy": 0.707
+        },
+        "137": {
+          "macro_f1": 0.6704,
+          "qwk": 0.6108,
+          "accuracy": 0.7037
+        }
+      },
+      "mean_macro_f1": 0.67345
+    },
+    {
+      "name": "semantic_tree+text:frozen+average_neural:0.2",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6765,
+          "qwk": 0.6206,
+          "accuracy": 0.7053
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6113,
+          "accuracy": 0.7028
+        }
+      },
+      "mean_macro_f1": 0.67325
+    },
+    {
+      "name": "semantic_tree+text:selected+dense:0.4",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6746,
+          "qwk": 0.6172,
+          "accuracy": 0.704
+        },
+        "137": {
+          "macro_f1": 0.6718,
+          "qwk": 0.6135,
+          "accuracy": 0.7032
+        }
+      },
+      "mean_macro_f1": 0.6732
+    },
+    {
+      "name": "semantic_tree+text:selected+average_neural:0.4",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6758,
+          "qwk": 0.6189,
+          "accuracy": 0.7051
+        },
+        "137": {
+          "macro_f1": 0.6703,
+          "qwk": 0.6123,
+          "accuracy": 0.7016
+        }
+      },
+      "mean_macro_f1": 0.6730499999999999
+    },
+    {
+      "name": "average_tree+text:selected+dense:0.3",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6745,
+          "qwk": 0.6167,
+          "accuracy": 0.7056
+        },
+        "137": {
+          "macro_f1": 0.6716,
+          "qwk": 0.6127,
+          "accuracy": 0.7042
+        }
+      },
+      "mean_macro_f1": 0.6730499999999999
+    },
+    {
+      "name": "semantic_tree+text:frozen+average_neural:0.3",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.676,
+          "qwk": 0.6203,
+          "accuracy": 0.7039
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6122,
+          "accuracy": 0.7012
+        }
+      },
+      "mean_macro_f1": 0.673
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense_ensemble:0.3",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6744,
+          "qwk": 0.6185,
+          "accuracy": 0.7013
+        },
+        "137": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6121,
+          "accuracy": 0.704
+        }
+      },
+      "mean_macro_f1": 0.6729499999999999
+    },
+    {
+      "name": "semantic_tree+text:frozen+average_neural:0.4",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6756,
+          "qwk": 0.6199,
+          "accuracy": 0.7029
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6127,
+          "accuracy": 0.6994
+        }
+      },
+      "mean_macro_f1": 0.6728000000000001
+    },
+    {
+      "name": "neighbor_tree+text:frozen+average_neural:0.2",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.673,
+          "qwk": 0.6158,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6726,
+          "qwk": 0.6153,
+          "accuracy": 0.7037
+        }
+      },
+      "mean_macro_f1": 0.6728000000000001
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense:0.2",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6733,
+          "qwk": 0.6169,
+          "accuracy": 0.7024
+        },
+        "137": {
+          "macro_f1": 0.6722,
+          "qwk": 0.6133,
+          "accuracy": 0.7049
+        }
+      },
+      "mean_macro_f1": 0.67275
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense:0.3",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6746,
+          "qwk": 0.6179,
+          "accuracy": 0.7027
+        },
+        "137": {
+          "macro_f1": 0.6709,
+          "qwk": 0.6122,
+          "accuracy": 0.7023
+        }
+      },
+      "mean_macro_f1": 0.67275
+    },
+    {
+      "name": "average_tree+text:frozen+dense_ensemble:0.4",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6721,
+          "qwk": 0.6169,
+          "accuracy": 0.6984
+        },
+        "137": {
+          "macro_f1": 0.6733,
+          "qwk": 0.6148,
+          "accuracy": 0.7045
+        }
+      },
+      "mean_macro_f1": 0.6727000000000001
+    },
+    {
+      "name": "average_tree+text:selected+average_neural:0.3",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6749,
+          "qwk": 0.6175,
+          "accuracy": 0.7058
+        },
+        "137": {
+          "macro_f1": 0.6705,
+          "qwk": 0.6125,
+          "accuracy": 0.7032
+        }
+      },
+      "mean_macro_f1": 0.6727000000000001
+    },
+    {
+      "name": "average_tree+text:selected+dense_ensemble:0.4",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6717,
+          "qwk": 0.6167,
+          "accuracy": 0.6991
+        },
+        "137": {
+          "macro_f1": 0.6736,
+          "qwk": 0.6137,
+          "accuracy": 0.7064
+        }
+      },
+      "mean_macro_f1": 0.67265
+    },
+    {
+      "name": "average_tree+text:frozen+average_neural:0.4",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6741,
+          "qwk": 0.6176,
+          "accuracy": 0.7024
+        },
+        "137": {
+          "macro_f1": 0.671,
+          "qwk": 0.6135,
+          "accuracy": 0.7008
+        }
+      },
+      "mean_macro_f1": 0.67255
+    },
+    {
+      "name": "semantic_tree+text:selected+dense_ensemble:0.2",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6747,
+          "qwk": 0.6167,
+          "accuracy": 0.7058
+        },
+        "137": {
+          "macro_f1": 0.6703,
+          "qwk": 0.609,
+          "accuracy": 0.7061
+        }
+      },
+      "mean_macro_f1": 0.6725
+    },
+    {
+      "name": "average_tree+text:selected+dense_ensemble:0.3",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6735,
+          "qwk": 0.6167,
+          "accuracy": 0.703
+        },
+        "137": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6112,
+          "accuracy": 0.7055
+        }
+      },
+      "mean_macro_f1": 0.6725
+    },
+    {
+      "name": "neighbor_tree+text:frozen+average_neural:0.3",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6735,
+          "qwk": 0.6169,
+          "accuracy": 0.7024
+        },
+        "137": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6135,
+          "accuracy": 0.7016
+        }
+      },
+      "mean_macro_f1": 0.6725
+    },
+    {
+      "name": "semantic_tree+text:selected+dense:0.2",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6763,
+          "qwk": 0.6181,
+          "accuracy": 0.7081
+        },
+        "137": {
+          "macro_f1": 0.6686,
+          "qwk": 0.6073,
+          "accuracy": 0.7037
+        }
+      },
+      "mean_macro_f1": 0.67245
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense:0.2",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6745,
+          "qwk": 0.6159,
+          "accuracy": 0.7057
+        },
+        "137": {
+          "macro_f1": 0.6703,
+          "qwk": 0.6099,
+          "accuracy": 0.7037
+        }
+      },
+      "mean_macro_f1": 0.6724
+    },
+    {
+      "name": "average_tree+text:frozen+average_neural:0.3",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6746,
+          "qwk": 0.6177,
+          "accuracy": 0.7038
+        },
+        "137": {
+          "macro_f1": 0.6701,
+          "qwk": 0.6121,
+          "accuracy": 0.7016
+        }
+      },
+      "mean_macro_f1": 0.67235
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense_ensemble:0.2",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6731,
+          "qwk": 0.6167,
+          "accuracy": 0.7015
+        },
+        "137": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6121,
+          "accuracy": 0.7049
+        }
+      },
+      "mean_macro_f1": 0.6723
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense_ensemble:0.3",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6721,
+          "qwk": 0.6166,
+          "accuracy": 0.6993
+        },
+        "137": {
+          "macro_f1": 0.6725,
+          "qwk": 0.6139,
+          "accuracy": 0.7036
+        }
+      },
+      "mean_macro_f1": 0.6723
+    },
+    {
+      "name": "neighbor_tree+text:frozen+finetune:0.3",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6742,
+          "qwk": 0.6188,
+          "accuracy": 0.7022
+        },
+        "137": {
+          "macro_f1": 0.6704,
+          "qwk": 0.6116,
+          "accuracy": 0.701
+        }
+      },
+      "mean_macro_f1": 0.6723
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense:0.3",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6736,
+          "qwk": 0.6159,
+          "accuracy": 0.7039
+        },
+        "137": {
+          "macro_f1": 0.671,
+          "qwk": 0.612,
+          "accuracy": 0.7032
+        }
+      },
+      "mean_macro_f1": 0.6723
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense_ensemble:0.2",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6735,
+          "qwk": 0.6156,
+          "accuracy": 0.7038
+        },
+        "137": {
+          "macro_f1": 0.6711,
+          "qwk": 0.6104,
+          "accuracy": 0.7056
+        }
+      },
+      "mean_macro_f1": 0.6723
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense:0.3",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6724,
+          "qwk": 0.6146,
+          "accuracy": 0.7013
+        },
+        "137": {
+          "macro_f1": 0.6721,
+          "qwk": 0.6143,
+          "accuracy": 0.7022
+        }
+      },
+      "mean_macro_f1": 0.67225
+    },
+    {
+      "name": "semantic_tree+text:frozen+finetune:0.2",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6758,
+          "qwk": 0.62,
+          "accuracy": 0.7043
+        },
+        "137": {
+          "macro_f1": 0.6685,
+          "qwk": 0.6095,
+          "accuracy": 0.7011
+        }
+      },
+      "mean_macro_f1": 0.67215
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense_ensemble:0.4",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.672,
+          "qwk": 0.6154,
+          "accuracy": 0.6995
+        },
+        "137": {
+          "macro_f1": 0.6723,
+          "qwk": 0.6143,
+          "accuracy": 0.7041
+        }
+      },
+      "mean_macro_f1": 0.67215
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense_ensemble:0.2",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6711,
+          "qwk": 0.6148,
+          "accuracy": 0.6998
+        },
+        "137": {
+          "macro_f1": 0.6731,
+          "qwk": 0.6149,
+          "accuracy": 0.7055
+        }
+      },
+      "mean_macro_f1": 0.6721
+    },
+    {
+      "name": "neighbor_tree+text:frozen+average_neural:0.4",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6739,
+          "qwk": 0.6171,
+          "accuracy": 0.7017
+        },
+        "137": {
+          "macro_f1": 0.6702,
+          "qwk": 0.6133,
+          "accuracy": 0.699
+        }
+      },
+      "mean_macro_f1": 0.67205
+    },
+    {
+      "name": "average_tree+text:frozen+dense:0.3",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6721,
+          "qwk": 0.6156,
+          "accuracy": 0.7013
+        },
+        "137": {
+          "macro_f1": 0.6719,
+          "qwk": 0.614,
+          "accuracy": 0.7032
+        }
+      },
+      "mean_macro_f1": 0.672
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense:0.4",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6739,
+          "qwk": 0.6166,
+          "accuracy": 0.7012
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6122,
+          "accuracy": 0.6997
+        }
+      },
+      "mean_macro_f1": 0.67195
+    },
+    {
+      "name": "neighbor_tree+text:selected+average_neural:0.2",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6743,
+          "qwk": 0.616,
+          "accuracy": 0.7057
+        },
+        "137": {
+          "macro_f1": 0.6696,
+          "qwk": 0.6089,
+          "accuracy": 0.7036
+        }
+      },
+      "mean_macro_f1": 0.67195
+    },
+    {
+      "name": "semantic_tree+text:selected+average_neural:0.2",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6753,
+          "qwk": 0.6171,
+          "accuracy": 0.707
+        },
+        "137": {
+          "macro_f1": 0.6685,
+          "qwk": 0.6081,
+          "accuracy": 0.7036
+        }
+      },
+      "mean_macro_f1": 0.6718999999999999
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense:0.2",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6723,
+          "qwk": 0.615,
+          "accuracy": 0.7021
+        },
+        "137": {
+          "macro_f1": 0.6714,
+          "qwk": 0.6134,
+          "accuracy": 0.7029
+        }
+      },
+      "mean_macro_f1": 0.6718500000000001
+    },
+    {
+      "name": "average_tree+text:frozen+dense:0.2",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6724,
+          "qwk": 0.6153,
+          "accuracy": 0.7025
+        },
+        "137": {
+          "macro_f1": 0.6712,
+          "qwk": 0.612,
+          "accuracy": 0.7039
+        }
+      },
+      "mean_macro_f1": 0.6718
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense:0.4",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6727,
+          "qwk": 0.6157,
+          "accuracy": 0.7004
+        },
+        "137": {
+          "macro_f1": 0.6709,
+          "qwk": 0.6132,
+          "accuracy": 0.6997
+        }
+      },
+      "mean_macro_f1": 0.6718
+    },
+    {
+      "name": "average_tree+text:selected+dense:0.2",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6746,
+          "qwk": 0.6165,
+          "accuracy": 0.7066
+        },
+        "137": {
+          "macro_f1": 0.6689,
+          "qwk": 0.609,
+          "accuracy": 0.7032
+        }
+      },
+      "mean_macro_f1": 0.6717500000000001
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense_ensemble:0.4",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6702,
+          "qwk": 0.6163,
+          "accuracy": 0.6959
+        },
+        "137": {
+          "macro_f1": 0.6732,
+          "qwk": 0.6152,
+          "accuracy": 0.7037
+        }
+      },
+      "mean_macro_f1": 0.6717
+    },
+    {
+      "name": "average_tree+text:selected+dense:0.4",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6729,
+          "qwk": 0.6154,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6701,
+          "qwk": 0.6115,
+          "accuracy": 0.701
+        }
+      },
+      "mean_macro_f1": 0.6715
+    },
+    {
+      "name": "average_tree+text:selected+dense_ensemble:0.2",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6741,
+          "qwk": 0.6163,
+          "accuracy": 0.7052
+        },
+        "137": {
+          "macro_f1": 0.6687,
+          "qwk": 0.6078,
+          "accuracy": 0.7039
+        }
+      },
+      "mean_macro_f1": 0.6714
+    },
+    {
+      "name": "average_tree+text:frozen+dense_ensemble:0.2",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6738,
+          "qwk": 0.6181,
+          "accuracy": 0.7028
+        },
+        "137": {
+          "macro_f1": 0.6689,
+          "qwk": 0.609,
+          "accuracy": 0.7028
+        }
+      },
+      "mean_macro_f1": 0.67135
+    },
+    {
+      "name": "semantic_tree+text:frozen+finetune:0.3",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6751,
+          "qwk": 0.6199,
+          "accuracy": 0.7033
+        },
+        "137": {
+          "macro_f1": 0.6675,
+          "qwk": 0.6098,
+          "accuracy": 0.6984
+        }
+      },
+      "mean_macro_f1": 0.6713
+    },
+    {
+      "name": "semantic_tree+text:selected+finetune:0.2",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6743,
+          "qwk": 0.6161,
+          "accuracy": 0.706
+        },
+        "137": {
+          "macro_f1": 0.6682,
+          "qwk": 0.6073,
+          "accuracy": 0.703
+        }
+      },
+      "mean_macro_f1": 0.67125
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense:0.1",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6717,
+          "qwk": 0.614,
+          "accuracy": 0.7024
+        },
+        "137": {
+          "macro_f1": 0.6708,
+          "qwk": 0.6122,
+          "accuracy": 0.7032
+        }
+      },
+      "mean_macro_f1": 0.6712499999999999
+    },
+    {
+      "name": "semantic_tree+text:frozen+average_neural:0.1",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6734,
+          "qwk": 0.6166,
+          "accuracy": 0.7031
+        },
+        "137": {
+          "macro_f1": 0.669,
+          "qwk": 0.6095,
+          "accuracy": 0.7031
+        }
+      },
+      "mean_macro_f1": 0.6712
+    },
+    {
+      "name": "average_tree+text:frozen+dense:0.4",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6722,
+          "qwk": 0.6149,
+          "accuracy": 0.7004
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6122,
+          "accuracy": 0.6996
+        }
+      },
+      "mean_macro_f1": 0.6711
+    },
+    {
+      "name": "neighbor_tree+text:selected+finetune:0.2",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6745,
+          "qwk": 0.6166,
+          "accuracy": 0.7058
+        },
+        "137": {
+          "macro_f1": 0.6677,
+          "qwk": 0.6075,
+          "accuracy": 0.702
+        }
+      },
+      "mean_macro_f1": 0.6711
+    },
+    {
+      "name": "neighbor_tree+text:frozen+finetune:0.2",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.672,
+          "qwk": 0.615,
+          "accuracy": 0.7012
+        },
+        "137": {
+          "macro_f1": 0.6701,
+          "qwk": 0.6118,
+          "accuracy": 0.7016
+        }
+      },
+      "mean_macro_f1": 0.67105
+    },
+    {
+      "name": "reference_tree+text:frozen+dense:0.4",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6724,
+          "qwk": 0.6153,
+          "accuracy": 0.7006
+        },
+        "137": {
+          "macro_f1": 0.6697,
+          "qwk": 0.6115,
+          "accuracy": 0.6992
+        }
+      },
+      "mean_macro_f1": 0.6710499999999999
+    },
+    {
+      "name": "reference_tree+text:selected+dense:0.4",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6724,
+          "qwk": 0.6153,
+          "accuracy": 0.7006
+        },
+        "137": {
+          "macro_f1": 0.6697,
+          "qwk": 0.6115,
+          "accuracy": 0.6992
+        }
+      },
+      "mean_macro_f1": 0.6710499999999999
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense_ensemble:0.1",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6727,
+          "qwk": 0.6164,
+          "accuracy": 0.7021
+        },
+        "137": {
+          "macro_f1": 0.6694,
+          "qwk": 0.6099,
+          "accuracy": 0.7039
+        }
+      },
+      "mean_macro_f1": 0.6710499999999999
+    },
+    {
+      "name": "semantic_tree+text:selected+finetune:0.3",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6746,
+          "qwk": 0.6173,
+          "accuracy": 0.7052
+        },
+        "137": {
+          "macro_f1": 0.6675,
+          "qwk": 0.6079,
+          "accuracy": 0.7002
+        }
+      },
+      "mean_macro_f1": 0.6710499999999999
+    },
+    {
+      "name": "neighbor_tree+text:selected+finetune:0.3",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6753,
+          "qwk": 0.6187,
+          "accuracy": 0.7053
+        },
+        "137": {
+          "macro_f1": 0.6668,
+          "qwk": 0.6068,
+          "accuracy": 0.6998
+        }
+      },
+      "mean_macro_f1": 0.6710499999999999
+    },
+    {
+      "name": "semantic_tree+text:frozen+dense:0.1",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6725,
+          "qwk": 0.6158,
+          "accuracy": 0.7022
+        },
+        "137": {
+          "macro_f1": 0.6695,
+          "qwk": 0.6105,
+          "accuracy": 0.7035
+        }
+      },
+      "mean_macro_f1": 0.671
+    },
+    {
+      "name": "average_tree+text:frozen+average_neural:0.2",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6731,
+          "qwk": 0.6171,
+          "accuracy": 0.703
+        },
+        "137": {
+          "macro_f1": 0.6689,
+          "qwk": 0.61,
+          "accuracy": 0.7018
+        }
+      },
+      "mean_macro_f1": 0.671
+    },
+    {
+      "name": "neighbor_tree+text:frozen+average_neural:0.1",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.671,
+          "qwk": 0.6133,
+          "accuracy": 0.7014
+        },
+        "137": {
+          "macro_f1": 0.671,
+          "qwk": 0.6124,
+          "accuracy": 0.7037
+        }
+      },
+      "mean_macro_f1": 0.671
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense:0.4",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6724,
+          "qwk": 0.6151,
+          "accuracy": 0.7012
+        },
+        "137": {
+          "macro_f1": 0.6695,
+          "qwk": 0.6112,
+          "accuracy": 0.7
+        }
+      },
+      "mean_macro_f1": 0.6709499999999999
+    },
+    {
+      "name": "neighbor_tree+text:frozen+dense_ensemble:0.1",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6706,
+          "qwk": 0.6135,
+          "accuracy": 0.7007
+        },
+        "137": {
+          "macro_f1": 0.6712,
+          "qwk": 0.6127,
+          "accuracy": 0.7042
+        }
+      },
+      "mean_macro_f1": 0.6709
+    },
+    {
+      "name": "semantic_tree+text:frozen+finetune:0.1",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6733,
+          "qwk": 0.6165,
+          "accuracy": 0.7032
+        },
+        "137": {
+          "macro_f1": 0.6684,
+          "qwk": 0.6089,
+          "accuracy": 0.7026
+        }
+      },
+      "mean_macro_f1": 0.67085
+    },
+    {
+      "name": "semantic_tree+text:selected+dense:0.1",
+      "tree": "semantic_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6752,
+          "qwk": 0.6156,
+          "accuracy": 0.7082
+        },
+        "137": {
+          "macro_f1": 0.6663,
+          "qwk": 0.6038,
+          "accuracy": 0.703
+        }
+      },
+      "mean_macro_f1": 0.67075
+    },
+    {
+      "name": "average_tree+text:selected+finetune:0.3",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6752,
+          "qwk": 0.6188,
+          "accuracy": 0.7056
+        },
+        "137": {
+          "macro_f1": 0.6663,
+          "qwk": 0.606,
+          "accuracy": 0.6998
+        }
+      },
+      "mean_macro_f1": 0.67075
+    },
+    {
+      "name": "neighbor_tree+text:selected+average_neural:0.1",
+      "tree": "neighbor_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6741,
+          "qwk": 0.6144,
+          "accuracy": 0.7066
+        },
+        "137": {
+          "macro_f1": 0.6671,
+          "qwk": 0.6048,
+          "accuracy": 0.7029
+        }
+      },
+      "mean_macro_f1": 0.6706000000000001
+    },
+    {
+      "name": "reference_tree+text:frozen+dense_ensemble:0.4",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6708,
+          "qwk": 0.6158,
+          "accuracy": 0.6976
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6112,
+          "accuracy": 0.7012
+        }
+      },
+      "mean_macro_f1": 0.6704
+    },
+    {
+      "name": "reference_tree+text:selected+dense_ensemble:0.4",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6708,
+          "qwk": 0.6158,
+          "accuracy": 0.6976
+        },
+        "137": {
+          "macro_f1": 0.67,
+          "qwk": 0.6112,
+          "accuracy": 0.7012
+        }
+      },
+      "mean_macro_f1": 0.6704
+    },
+    {
+      "name": "neighbor_tree+text:selected+finetune:0.1",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6744,
+          "qwk": 0.6154,
+          "accuracy": 0.7068
+        },
+        "137": {
+          "macro_f1": 0.6664,
+          "qwk": 0.604,
+          "accuracy": 0.7023
+        }
+      },
+      "mean_macro_f1": 0.6704
+    },
+    {
+      "name": "reference_tree+text:frozen+dense:0.3",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6715,
+          "qwk": 0.615,
+          "accuracy": 0.7009
+        },
+        "137": {
+          "macro_f1": 0.6692,
+          "qwk": 0.6105,
+          "accuracy": 0.7002
+        }
+      },
+      "mean_macro_f1": 0.67035
+    },
+    {
+      "name": "reference_tree+text:selected+dense:0.3",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6715,
+          "qwk": 0.615,
+          "accuracy": 0.7009
+        },
+        "137": {
+          "macro_f1": 0.6692,
+          "qwk": 0.6105,
+          "accuracy": 0.7002
+        }
+      },
+      "mean_macro_f1": 0.67035
+    },
+    {
+      "name": "semantic_tree+text:frozen+finetune:0.4",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6744,
+          "qwk": 0.6188,
+          "accuracy": 0.7013
+        },
+        "137": {
+          "macro_f1": 0.6663,
+          "qwk": 0.6084,
+          "accuracy": 0.6961
+        }
+      },
+      "mean_macro_f1": 0.67035
+    },
+    {
+      "name": "semantic_tree+text:selected+average_neural:0.1",
+      "tree": "semantic_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6744,
+          "qwk": 0.6148,
+          "accuracy": 0.7075
+        },
+        "137": {
+          "macro_f1": 0.6663,
+          "qwk": 0.6042,
+          "accuracy": 0.7029
+        }
+      },
+      "mean_macro_f1": 0.67035
+    },
+    {
+      "name": "average_tree+text:selected+average_neural:0.2",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6731,
+          "qwk": 0.6148,
+          "accuracy": 0.705
+        },
+        "137": {
+          "macro_f1": 0.6676,
+          "qwk": 0.6076,
+          "accuracy": 0.7022
+        }
+      },
+      "mean_macro_f1": 0.67035
+    },
+    {
+      "name": "neighbor_tree+text:frozen+finetune:0.1",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.671,
+          "qwk": 0.6135,
+          "accuracy": 0.7013
+        },
+        "137": {
+          "macro_f1": 0.6697,
+          "qwk": 0.6106,
+          "accuracy": 0.7022
+        }
+      },
+      "mean_macro_f1": 0.67035
+    },
+    {
+      "name": "neighbor_tree+text:frozen+finetune:0.4",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.673,
+          "qwk": 0.617,
+          "accuracy": 0.7
+        },
+        "137": {
+          "macro_f1": 0.6676,
+          "qwk": 0.6092,
+          "accuracy": 0.6969
+        }
+      },
+      "mean_macro_f1": 0.6703
+    },
+    {
+      "name": "semantic_tree+text:selected+finetune:0.4",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6745,
+          "qwk": 0.6177,
+          "accuracy": 0.7035
+        },
+        "137": {
+          "macro_f1": 0.666,
+          "qwk": 0.607,
+          "accuracy": 0.6968
+        }
+      },
+      "mean_macro_f1": 0.67025
+    },
+    {
+      "name": "semantic_tree+text:selected+dense_ensemble:0.1",
+      "tree": "semantic_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6736,
+          "qwk": 0.6138,
+          "accuracy": 0.7064
+        },
+        "137": {
+          "macro_f1": 0.6667,
+          "qwk": 0.6043,
+          "accuracy": 0.7036
+        }
+      },
+      "mean_macro_f1": 0.67015
+    },
+    {
+      "name": "reference_tree+text:frozen+average_neural:0.4",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6727,
+          "qwk": 0.616,
+          "accuracy": 0.7011
+        },
+        "137": {
+          "macro_f1": 0.6673,
+          "qwk": 0.6089,
+          "accuracy": 0.6972
+        }
+      },
+      "mean_macro_f1": 0.6699999999999999
+    },
+    {
+      "name": "reference_tree+text:selected+average_neural:0.4",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6727,
+          "qwk": 0.616,
+          "accuracy": 0.7011
+        },
+        "137": {
+          "macro_f1": 0.6673,
+          "qwk": 0.6089,
+          "accuracy": 0.6972
+        }
+      },
+      "mean_macro_f1": 0.6699999999999999
+    },
+    {
+      "name": "average_tree+text:selected+finetune:0.2",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.673,
+          "qwk": 0.615,
+          "accuracy": 0.7052
+        },
+        "137": {
+          "macro_f1": 0.6668,
+          "qwk": 0.6065,
+          "accuracy": 0.7017
+        }
+      },
+      "mean_macro_f1": 0.6698999999999999
+    },
+    {
+      "name": "reference_tree+text:frozen+average_neural:0.3",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6733,
+          "qwk": 0.6172,
+          "accuracy": 0.7022
+        },
+        "137": {
+          "macro_f1": 0.6664,
+          "qwk": 0.6078,
+          "accuracy": 0.6977
+        }
+      },
+      "mean_macro_f1": 0.6698500000000001
+    },
+    {
+      "name": "reference_tree+text:selected+average_neural:0.3",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6733,
+          "qwk": 0.6172,
+          "accuracy": 0.7022
+        },
+        "137": {
+          "macro_f1": 0.6664,
+          "qwk": 0.6078,
+          "accuracy": 0.6977
+        }
+      },
+      "mean_macro_f1": 0.6698500000000001
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense:0.1",
+      "tree": "neighbor_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.673,
+          "qwk": 0.6132,
+          "accuracy": 0.7055
+        },
+        "137": {
+          "macro_f1": 0.6667,
+          "qwk": 0.6042,
+          "accuracy": 0.7023
+        }
+      },
+      "mean_macro_f1": 0.6698500000000001
+    },
+    {
+      "name": "semantic_tree+text:selected+finetune:0.1",
+      "tree": "semantic_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6748,
+          "qwk": 0.6154,
+          "accuracy": 0.7077
+        },
+        "137": {
+          "macro_f1": 0.6648,
+          "qwk": 0.6023,
+          "accuracy": 0.7016
+        }
+      },
+      "mean_macro_f1": 0.6698
+    },
+    {
+      "name": "average_tree+text:frozen+finetune:0.3",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6733,
+          "qwk": 0.6167,
+          "accuracy": 0.702
+        },
+        "137": {
+          "macro_f1": 0.6663,
+          "qwk": 0.6077,
+          "accuracy": 0.6979
+        }
+      },
+      "mean_macro_f1": 0.6698
+    },
+    {
+      "name": "average_tree+text:frozen+finetune:0.4",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6735,
+          "qwk": 0.6173,
+          "accuracy": 0.7012
+        },
+        "137": {
+          "macro_f1": 0.666,
+          "qwk": 0.6085,
+          "accuracy": 0.6959
+        }
+      },
+      "mean_macro_f1": 0.6697500000000001
+    },
+    {
+      "name": "neighbor_tree+text:selected+dense_ensemble:0.1",
+      "tree": "neighbor_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6727,
+          "qwk": 0.6135,
+          "accuracy": 0.7046
+        },
+        "137": {
+          "macro_f1": 0.6668,
+          "qwk": 0.6042,
+          "accuracy": 0.7028
+        }
+      },
+      "mean_macro_f1": 0.66975
+    },
+    {
+      "name": "neighbor_tree+text:selected+finetune:0.4",
+      "tree": "neighbor_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6737,
+          "qwk": 0.6175,
+          "accuracy": 0.7022
+        },
+        "137": {
+          "macro_f1": 0.6657,
+          "qwk": 0.6072,
+          "accuracy": 0.6967
+        }
+      },
+      "mean_macro_f1": 0.6697
+    },
+    {
+      "name": "average_tree+text:frozen+dense:0.1",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6728,
+          "qwk": 0.6152,
+          "accuracy": 0.7037
+        },
+        "137": {
+          "macro_f1": 0.6665,
+          "qwk": 0.6062,
+          "accuracy": 0.7008
+        }
+      },
+      "mean_macro_f1": 0.66965
+    },
+    {
+      "name": "average_tree+text:selected+finetune:0.4",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6745,
+          "qwk": 0.618,
+          "accuracy": 0.7035
+        },
+        "137": {
+          "macro_f1": 0.6647,
+          "qwk": 0.6055,
+          "accuracy": 0.6959
+        }
+      },
+      "mean_macro_f1": 0.6696
+    },
+    {
+      "name": "average_tree+text:frozen+finetune:0.2",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6719,
+          "qwk": 0.6155,
+          "accuracy": 0.7019
+        },
+        "137": {
+          "macro_f1": 0.6666,
+          "qwk": 0.6074,
+          "accuracy": 0.7
+        }
+      },
+      "mean_macro_f1": 0.66925
+    },
+    {
+      "name": "reference_tree+text:frozen+dense_ensemble:0.3",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6701,
+          "qwk": 0.6148,
+          "accuracy": 0.6982
+        },
+        "137": {
+          "macro_f1": 0.668,
+          "qwk": 0.6074,
+          "accuracy": 0.7007
+        }
+      },
+      "mean_macro_f1": 0.66905
+    },
+    {
+      "name": "reference_tree+text:selected+dense_ensemble:0.3",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6701,
+          "qwk": 0.6148,
+          "accuracy": 0.6982
+        },
+        "137": {
+          "macro_f1": 0.668,
+          "qwk": 0.6074,
+          "accuracy": 0.7007
+        }
+      },
+      "mean_macro_f1": 0.66905
+    },
+    {
+      "name": "average_tree+text:frozen+average_neural:0.1",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6723,
+          "qwk": 0.6149,
+          "accuracy": 0.7035
+        },
+        "137": {
+          "macro_f1": 0.6656,
+          "qwk": 0.6051,
+          "accuracy": 0.7001
+        }
+      },
+      "mean_macro_f1": 0.6689499999999999
+    },
+    {
+      "name": "average_tree+text:frozen+dense_ensemble:0.1",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6722,
+          "qwk": 0.6154,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6655,
+          "qwk": 0.6048,
+          "accuracy": 0.7003
+        }
+      },
+      "mean_macro_f1": 0.66885
+    },
+    {
+      "name": "neighbor_tree+text:frozen",
+      "tree": "neighbor_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.67,
+          "qwk": 0.6118,
+          "accuracy": 0.7011
+        },
+        "137": {
+          "macro_f1": 0.6677,
+          "qwk": 0.6082,
+          "accuracy": 0.7014
+        }
+      },
+      "mean_macro_f1": 0.66885
+    },
+    {
+      "name": "average_tree+text:selected+dense_ensemble:0.1",
+      "tree": "average_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6715,
+          "qwk": 0.6126,
+          "accuracy": 0.7042
+        },
+        "137": {
+          "macro_f1": 0.6654,
+          "qwk": 0.6044,
+          "accuracy": 0.702
+        }
+      },
+      "mean_macro_f1": 0.66845
+    },
+    {
+      "name": "average_tree+text:selected+average_neural:0.1",
+      "tree": "average_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6714,
+          "qwk": 0.6122,
+          "accuracy": 0.7047
+        },
+        "137": {
+          "macro_f1": 0.6654,
+          "qwk": 0.6041,
+          "accuracy": 0.7016
+        }
+      },
+      "mean_macro_f1": 0.6684
+    },
+    {
+      "name": "reference_tree+text:frozen+dense_ensemble:0.2",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6732,
+          "qwk": 0.6175,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6633,
+          "qwk": 0.602,
+          "accuracy": 0.6974
+        }
+      },
+      "mean_macro_f1": 0.66825
+    },
+    {
+      "name": "reference_tree+text:selected+dense_ensemble:0.2",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6732,
+          "qwk": 0.6175,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6633,
+          "qwk": 0.602,
+          "accuracy": 0.6974
+        }
+      },
+      "mean_macro_f1": 0.66825
+    },
+    {
+      "name": "semantic_tree+text:frozen",
+      "tree": "semantic_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6706,
+          "qwk": 0.613,
+          "accuracy": 0.7012
+        },
+        "137": {
+          "macro_f1": 0.6659,
+          "qwk": 0.6056,
+          "accuracy": 0.7013
+        }
+      },
+      "mean_macro_f1": 0.66825
+    },
+    {
+      "name": "average_tree+text:frozen+finetune:0.1",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6716,
+          "qwk": 0.6146,
+          "accuracy": 0.7027
+        },
+        "137": {
+          "macro_f1": 0.6648,
+          "qwk": 0.6044,
+          "accuracy": 0.6995
+        }
+      },
+      "mean_macro_f1": 0.6681999999999999
+    },
+    {
+      "name": "average_tree+text:selected+dense:0.1",
+      "tree": "average_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6713,
+          "qwk": 0.612,
+          "accuracy": 0.7044
+        },
+        "137": {
+          "macro_f1": 0.665,
+          "qwk": 0.604,
+          "accuracy": 0.7013
+        }
+      },
+      "mean_macro_f1": 0.66815
+    },
+    {
+      "name": "average_tree+text:selected+finetune:0.1",
+      "tree": "average_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6719,
+          "qwk": 0.6129,
+          "accuracy": 0.7053
+        },
+        "137": {
+          "macro_f1": 0.6641,
+          "qwk": 0.6021,
+          "accuracy": 0.7004
+        }
+      },
+      "mean_macro_f1": 0.668
+    },
+    {
+      "name": "reference_tree+text:frozen+finetune:0.4",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6716,
+          "qwk": 0.6149,
+          "accuracy": 0.6998
+        },
+        "137": {
+          "macro_f1": 0.6644,
+          "qwk": 0.6065,
+          "accuracy": 0.6944
+        }
+      },
+      "mean_macro_f1": 0.6679999999999999
+    },
+    {
+      "name": "reference_tree+text:selected+finetune:0.4",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.4,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6716,
+          "qwk": 0.6149,
+          "accuracy": 0.6998
+        },
+        "137": {
+          "macro_f1": 0.6644,
+          "qwk": 0.6065,
+          "accuracy": 0.6944
+        }
+      },
+      "mean_macro_f1": 0.6679999999999999
+    },
+    {
+      "name": "reference_tree+text:frozen+dense:0.2",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.672,
+          "qwk": 0.6158,
+          "accuracy": 0.702
+        },
+        "137": {
+          "macro_f1": 0.6629,
+          "qwk": 0.6023,
+          "accuracy": 0.6959
+        }
+      },
+      "mean_macro_f1": 0.6674500000000001
+    },
+    {
+      "name": "reference_tree+text:selected+dense:0.2",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.672,
+          "qwk": 0.6158,
+          "accuracy": 0.702
+        },
+        "137": {
+          "macro_f1": 0.6629,
+          "qwk": 0.6023,
+          "accuracy": 0.6959
+        }
+      },
+      "mean_macro_f1": 0.6674500000000001
+    },
+    {
+      "name": "neighbor_tree+text:selected",
+      "tree": "neighbor_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6725620730234723,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.5
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6726,
+          "qwk": 0.6129,
+          "accuracy": 0.7058
+        },
+        "137": {
+          "macro_f1": 0.6623,
+          "qwk": 0.5988,
+          "accuracy": 0.6994
+        }
+      },
+      "mean_macro_f1": 0.66745
+    },
+    {
+      "name": "reference_tree+text:frozen+finetune:0.3",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6714,
+          "qwk": 0.6146,
+          "accuracy": 0.7004
+        },
+        "137": {
+          "macro_f1": 0.6634,
+          "qwk": 0.6041,
+          "accuracy": 0.6952
+        }
+      },
+      "mean_macro_f1": 0.6674
+    },
+    {
+      "name": "reference_tree+text:selected+finetune:0.3",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.3,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6714,
+          "qwk": 0.6146,
+          "accuracy": 0.7004
+        },
+        "137": {
+          "macro_f1": 0.6634,
+          "qwk": 0.6041,
+          "accuracy": 0.6952
+        }
+      },
+      "mean_macro_f1": 0.6674
+    },
+    {
+      "name": "reference_tree+text:frozen+average_neural:0.2",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6725,
+          "qwk": 0.617,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6619,
+          "qwk": 0.6009,
+          "accuracy": 0.6953
+        }
+      },
+      "mean_macro_f1": 0.6672
+    },
+    {
+      "name": "reference_tree+text:selected+average_neural:0.2",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6725,
+          "qwk": 0.617,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6619,
+          "qwk": 0.6009,
+          "accuracy": 0.6953
+        }
+      },
+      "mean_macro_f1": 0.6672
+    },
+    {
+      "name": "semantic_tree+text:selected",
+      "tree": "semantic_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6731241284992583,
+        "tree_weight": [
+          0.9,
+          0.5,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6731,
+          "qwk": 0.6126,
+          "accuracy": 0.7072
+        },
+        "137": {
+          "macro_f1": 0.6612,
+          "qwk": 0.5969,
+          "accuracy": 0.6993
+        }
+      },
+      "mean_macro_f1": 0.66715
+    },
+    {
+      "name": "average_tree+text:selected",
+      "tree": "average_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6714160552263762,
+        "tree_weight": [
+          0.7,
+          0.7,
+          0.9
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6714,
+          "qwk": 0.6117,
+          "accuracy": 0.7055
+        },
+        "137": {
+          "macro_f1": 0.6623,
+          "qwk": 0.5996,
+          "accuracy": 0.6997
+        }
+      },
+      "mean_macro_f1": 0.6668499999999999
+    },
+    {
+      "name": "average_tree+text:frozen",
+      "tree": "average_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6704,
+          "qwk": 0.6122,
+          "accuracy": 0.7026
+        },
+        "137": {
+          "macro_f1": 0.6622,
+          "qwk": 0.6014,
+          "accuracy": 0.6977
+        }
+      },
+      "mean_macro_f1": 0.6663
+    },
+    {
+      "name": "reference_tree+text:frozen+dense_ensemble:0.1",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6694,
+          "qwk": 0.6126,
+          "accuracy": 0.7001
+        },
+        "137": {
+          "macro_f1": 0.662,
+          "qwk": 0.5995,
+          "accuracy": 0.697
+        }
+      },
+      "mean_macro_f1": 0.6657
+    },
+    {
+      "name": "reference_tree+text:selected+dense_ensemble:0.1",
+      "tree": "reference_tree",
+      "neural": "dense_ensemble",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6694,
+          "qwk": 0.6126,
+          "accuracy": 0.7001
+        },
+        "137": {
+          "macro_f1": 0.662,
+          "qwk": 0.5995,
+          "accuracy": 0.697
+        }
+      },
+      "mean_macro_f1": 0.6657
+    },
+    {
+      "name": "reference_tree+text:frozen+finetune:0.2",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6704,
+          "qwk": 0.6147,
+          "accuracy": 0.7005
+        },
+        "137": {
+          "macro_f1": 0.6607,
+          "qwk": 0.5999,
+          "accuracy": 0.6943
+        }
+      },
+      "mean_macro_f1": 0.66555
+    },
+    {
+      "name": "reference_tree+text:selected+finetune:0.2",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.2,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6704,
+          "qwk": 0.6147,
+          "accuracy": 0.7005
+        },
+        "137": {
+          "macro_f1": 0.6607,
+          "qwk": 0.5999,
+          "accuracy": 0.6943
+        }
+      },
+      "mean_macro_f1": 0.66555
+    },
+    {
+      "name": "reference_tree+text:frozen+dense:0.1",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6692,
+          "qwk": 0.612,
+          "accuracy": 0.7003
+        },
+        "137": {
+          "macro_f1": 0.6612,
+          "qwk": 0.5992,
+          "accuracy": 0.6954
+        }
+      },
+      "mean_macro_f1": 0.6652
+    },
+    {
+      "name": "reference_tree+text:selected+dense:0.1",
+      "tree": "reference_tree",
+      "neural": "dense",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6692,
+          "qwk": 0.612,
+          "accuracy": 0.7003
+        },
+        "137": {
+          "macro_f1": 0.6612,
+          "qwk": 0.5992,
+          "accuracy": 0.6954
+        }
+      },
+      "mean_macro_f1": 0.6652
+    },
+    {
+      "name": "reference_tree+text:frozen+average_neural:0.1",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6688,
+          "qwk": 0.6119,
+          "accuracy": 0.7002
+        },
+        "137": {
+          "macro_f1": 0.6604,
+          "qwk": 0.5982,
+          "accuracy": 0.6947
+        }
+      },
+      "mean_macro_f1": 0.6646
+    },
+    {
+      "name": "reference_tree+text:selected+average_neural:0.1",
+      "tree": "reference_tree",
+      "neural": "average_neural",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6688,
+          "qwk": 0.6119,
+          "accuracy": 0.7002
+        },
+        "137": {
+          "macro_f1": 0.6604,
+          "qwk": 0.5982,
+          "accuracy": 0.6947
+        }
+      },
+      "mean_macro_f1": 0.6646
+    },
+    {
+      "name": "reference_tree+text:frozen+finetune:0.1",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6692,
+          "qwk": 0.6124,
+          "accuracy": 0.7005
+        },
+        "137": {
+          "macro_f1": 0.6589,
+          "qwk": 0.597,
+          "accuracy": 0.6933
+        }
+      },
+      "mean_macro_f1": 0.66405
+    },
+    {
+      "name": "reference_tree+text:selected+finetune:0.1",
+      "tree": "reference_tree",
+      "neural": "finetune",
+      "neural_weight": 0.1,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6692,
+          "qwk": 0.6124,
+          "accuracy": 0.7005
+        },
+        "137": {
+          "macro_f1": 0.6589,
+          "qwk": 0.597,
+          "accuracy": 0.6933
+        }
+      },
+      "mean_macro_f1": 0.66405
+    },
+    {
+      "name": "reference_tree+text:frozen",
+      "tree": "reference_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6662,
+          "qwk": 0.6079,
+          "accuracy": 0.6982
+        },
+        "137": {
+          "macro_f1": 0.6564,
+          "qwk": 0.5944,
+          "accuracy": 0.6919
+        }
+      },
+      "mean_macro_f1": 0.6613
+    },
+    {
+      "name": "reference_tree+text:selected",
+      "tree": "reference_tree",
+      "neural": null,
+      "neural_weight": 0.0,
+      "blend": {
+        "validation_macro_f1": 0.6662434780744835,
+        "tree_weight": [
+          0.6,
+          1.0,
+          0.6
+        ],
+        "class_weights": [
+          0.75,
+          1.0,
+          0.6
+        ]
+      },
+      "validation": {
+        "42": {
+          "macro_f1": 0.6662,
+          "qwk": 0.6079,
+          "accuracy": 0.6982
+        },
+        "137": {
+          "macro_f1": 0.6564,
+          "qwk": 0.5944,
+          "accuracy": 0.6919
+        }
+      },
+      "mean_macro_f1": 0.6613
+    }
+  ]
+}
