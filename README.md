@@ -2,6 +2,8 @@
 
 # Kairos Dataset
 
+Latest local study: **0.6708 macro-F1** on the full official test. [PDF](submission-v3/Lab1_Rostislav_Manzyuk.pdf) · [Executed notebook](Lab1_target70.ipynb) · [Study details](IMPROVEMENT.md). Reproduce with `python run_lab1_v3.py --data data`.
+
 Student Lab 1 solution by Rostislav Manzyuk: [Notes](LAB1.md) · [Notebook](Lab1.ipynb) · [PDF report](submission/Lab1_Rostislav_Manzyuk.pdf).
 Reproduce the frozen experiment with `python run_lab1.py --data data`.
 

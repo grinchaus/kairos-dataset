@@ -1,1 +1,2 @@
 *.pdf binary
+*.py text eol=lf

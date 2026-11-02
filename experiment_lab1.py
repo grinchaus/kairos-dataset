@@ -64,7 +64,10 @@ def reference_probabilities(train, numeric, store, seed, folder):
         ):
             raise ValueError("Reference split mismatch")
         tree_prob, text_prob = saved["tree"], saved["text"]
-    elif seed == 42:
+    elif (
+        seed == 42
+        and Path("results/validation-timestamps/validation_probabilities.npz").is_file()
+    ):
         saved = np.load("results/validation-timestamps/validation_probabilities.npz")
         if not np.array_equal(saved["posts"], val.post) or not np.array_equal(
             saved["authors"], val.author
@@ -80,11 +83,11 @@ def reference_probabilities(train, numeric, store, seed, folder):
             labels=val.label.to_numpy(),
         )
     else:
-        reference = boosted(2088, 8, 6)
+        reference = boosted(2088, 2, 6)
         reference.fit(
             tabular(fit, tree_numeric), fit.label, cat_features=CATEGORICAL, verbose=500
         )
-        tree_prob = reference.predict_proba(tabular(val, tree_numeric))
+        tree_prob = reference.predict_proba(tabular(val, tree_numeric), thread_count=2)
         linear = text_model(numeric).fit(fit, fit.label)
         text_prob = linear.predict_proba(val)
         np.savez_compressed(
@@ -109,7 +112,7 @@ def main():
     args = ap.parse_args()
     train, numeric, store = experiment_table(args.data, args.embeddings)
     summary = {}
-    with threadpool_limits(limits=8):
+    with threadpool_limits(limits=2):
         for seed in args.seeds:
             start = time.time()
             folder = args.output / str(seed)
@@ -130,7 +133,7 @@ def main():
                 use_best_model=True,
                 verbose=400,
             )
-            probability = model.predict_proba(tabular(val, features))
+            probability = model.predict_proba(tabular(val, features), thread_count=2)
             selection = select_blend(val.label, probability, text)
             frozen_result = score(val.label, blend(probability, text, frozen))
             selected_result = score(val.label, blend(probability, text, selection))

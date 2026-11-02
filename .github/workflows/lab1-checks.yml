@@ -2,7 +2,7 @@ name: Lab 1 checks
 
 on:
   push:
-    branches: [lab1-rostislav-manzyuk, lab1-improvement]
+    branches: [lab1-rostislav-manzyuk, lab1-improvement, lab1-target70]
   pull_request:
 
 permissions:
